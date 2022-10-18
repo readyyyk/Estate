@@ -1,0 +1,158 @@
+
+$text-dark: #444444;
+$text-light:  #45525B;
+$text-lighter: #6F7278;
+$text-orange: #FF8A63;
+
+$bg-grey: #FAFAFC;
+$bg-grey-light: #F9FAFB;
+$bg-grey-dark: #45525B;
+$bg-footer: #292C32;
+$bg-form: #3A4443;
+
+$border-color: #CACCD1;
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/fonts/Poppins-Regular.ttf");
+}
+.pLib-sb-Minimal::-webkit-scrollbar{width:.9em;background:transparent}
+.pLib-sb-Minimal::-webkit-scrollbar-track{background:transparent}
+.pLib-sb-Minimal::-webkit-scrollbar-thumb{background-color:#9ba3a7;border-radius:20px;border:5px solid transparent;background-clip:content-box}
+.pLib-sb-Minimal::-webkit-scrollbar-thumb:hover{background-color:#747474}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: $text-dark;
+}
+a{
+  transition: color ease .17s;
+  &:hover{
+    color: $text-orange;
+  }
+}
+
+.card-body span{
+  font-size: 12px;
+}
+.vr{
+  width: 2px;
+  background-color: $text-orange;
+  opacity: 1;
+}
+
+.text-grey{
+  color: $text-light;
+}
+.text-light-grey{
+  color: $text-lighter;
+}
+.text-orange{
+  color: $text-orange;
+}
+
+.bg-grey-dark{
+  background: $bg-grey-dark;
+}
+.bg-grey{
+  background: $bg-grey;
+}
+.bg-footer{
+  background: $bg-footer;
+}
+
+.input-orange:focus{
+  box-shadow: rgba(255, 138, 99, .4) 0 0px 0px 4px !important;
+}
+
+.wh-60{
+  width: 60px;
+  height: 60px;
+}
+.mw-300{
+  max-width: 300px;
+}
+.text-12{
+  font-size: 12px;
+}
+
+#slider{
+
+  overflow: hidden;
+
+  &-inner{
+    min-width: fit-content;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all .7s ease;
+  }
+}
+
+.section{
+
+  &__title{
+    max-width: 600px;
+    margin-bottom: 2em;
+  }
+
+  &1{
+    opacity: 1;
+    pointer-events:none;
+
+    &::before{
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      background: url("../src/imgs/bg-1.jpg") center 20%;
+      background-size: cover;
+      opacity: .4;
+      z-index: -1;
+    }
+
+    &::after{
+      content: "";
+
+      width: 4em;
+      height: 4em;
+
+      position: absolute;
+      left: 50%;
+      bottom: 5em;
+      transform: translateX(-50%) rotateZ(.25turn);
+
+      background: url("../src/imgs/right-arrow-inside-circle.svg");
+      background-size: cover;
+      opacity: .6;
+
+      transition: opacity .1s ease;
+
+      pointer-events: all;
+      cursor: pointer;
+    }
+  }
+
+  &2{
+    background: $bg-grey;
+  }
+}
+
+
+@media (max-width: 992px){
+  .section1::after {
+    width: 3.5em;
+    height: 3.5em;
+    bottom: 3em;
+  }
+  .wh-60{
+    min-width: 60px;
+  }
+  .mw-300{
+    max-width: none;
+  }
+}
