@@ -9,7 +9,7 @@ function sliderMove(dir){
         temp = Number(tempStr.replace("px",""))
     if(dir && temp < 0)
         temp += step
-    else if(!dir && -temp < innerW-step)
+    else if(!dir && -temp < innerW-step-window.innerWidth/4)
         temp -= step
 
     console.log(`${temp}px`)
@@ -46,7 +46,7 @@ sliderParent.addEventListener("touchend", (e) => {
     // if(timeDiff < maxTime){
         if(diff > minDiff && temp < 0)
             temp += step
-        else if(-diff > minDiff && -temp < innerW-step)
+        else if(-diff > minDiff && -temp < innerW-step-window.innerWidth/4)
             temp -= step
     // }
 
