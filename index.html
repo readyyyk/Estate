@@ -26,9 +26,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <div class="navbar-nav pt-2 pt-sm-0">
                     <a class="nav-link active" href="#listings">Listings</a>
-                    <a class="nav-link" href="#newsroom">Newsroom</a>
-                    <a class="nav-link" href="#contacts">Contact</a>
                     <a class="nav-link" href="#team">Our team</a>
+                    <a class="nav-link" href="#newsroom">Newsroom</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
             </div>
         </section>
 
-        <section id="listings" class="section3 bg-light pt-5">
+        <section class="section3 bg-light pt-5">
             <div class="container-lg d-flex align-items-center flex-column p-lg-5">
                 <div class="text-center section__title">
                     <h6 class="text-orange">Our requirements</h6>
@@ -72,7 +72,7 @@
                 <div class="d-flex flex-column flex-lg-row px-4">
 
                     <img class="mb-3 mb-md-0 me-0 me-lg-5 img-fluid rounded-5" src="src/imgs/opp-bg.png" alt="opp-img">
-                    <div class="d-flex flex-column justify-content-between py-5 section3__opp">
+                    <div class="d-flex flex-column justify-content-between pt-3 py-md-5 section3__opp">
                         <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300" style="letter-spacing: 2px">
                             <div class="bg-grey-dark p-3 m-3 m-lg-0 wh-60 text-center">
                                 <img src="src/imgs/opp-1.svg" alt="opp-1">
@@ -111,7 +111,7 @@
             <img class="img-fluid" src="src/imgs/bg-4.jpg" alt="bg-4" style="width: 100%;;min-height: 50vh;">
         </section> -->
 
-        <section class="py-3 bg-grey">
+        <section class="py-3 bg-grey" id="listings">
             <div class="container-lg px-4 px-lg-0">
                 <div class="section__title">
                     <h6 class="text-orange">Current listings</h6>
@@ -133,7 +133,7 @@
         <section class="bg-light d-flex justify-content-center py-5" id="team">
             <div class="container-lg px-4 px-lg-0 row">
                 <div class="section__title pe-5 mb-5 mb-md-4 col-12 col-lg-4">
-                    <h6 class="text-orange">Current listings</h6>
+                    <h6 class="text-orange">Our people</h6>
                     <h2>What we have in store for you.</h2>
                     <p class="text-light-grey">Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
                     <a href="#" class="text-decoration-none text-grey">
@@ -148,7 +148,7 @@
             </div>
         </section>
 
-        <section class="d-flex justify-content-center flex-wrap bg-grey pt-0 pt-lg-5">
+        <section class="d-flex justify-content-center flex-wrap bg-grey pt-0 pt-lg-5" id="newsroom">
             <div class="section__title container-fluid text-center my-2 my-md-3">
                 <h6 class="text-orange">Newsroom</h6>
                 <h2>Writing from Estate.</h2>
@@ -205,13 +205,13 @@
             </div>
 
             <div class="container text-center text-lg-end mt-4">
-                <img class="me-2" src="src/imgs/right-arrow-inside-circle.svg" alt="right-arrow" style="transform: rotateZ(.5turn); height:4em; cursor: pointer;" onclick="slider(true)">
-                <img src="src/imgs/right-arrow-inside-circle.svg" alt="right-arrow" style="height:4em; cursor: pointer;"  onclick="slider(false)">
+                <img class="me-2" src="src/imgs/right-arrow-inside-circle.svg" alt="right-arrow" style="transform: rotateZ(.5turn); height:4em; cursor: pointer;" onclick="sliderMove(true)">
+                <img src="src/imgs/right-arrow-inside-circle.svg" alt="right-arrow" style="height:4em; cursor: pointer;"  onclick="sliderMove(false)">
             </div>
 
         </section>
 
-        <section class="container-fluid py-sm-5 text-light text-center bg-grey-dark">
+        <section class="container-fluid py-sm-5 text-light text-center bg-grey-dark" id="contact">
             <div class="py-5 mx-auto" style="max-width:600px">
                 <h6 class="text-uppercase" style="font-size: 14px;letter-spacing: 2px;">Seen enough?</h6>
                 <h1>Get in touch with us today.</h1>
@@ -225,7 +225,7 @@
     </main>
 
     <footer class="bg-footer pt-5">
-        <div class="container-fluid py-sm-5 d-flex justify-content-center align-items-end">
+        <div class="container-fluid py-sm-3 d-flex justify-content-center align-items-end">
             <img src="src/imgs/logo-white.svg" alt="logo-white" class="me-2">
             <img src="src/imgs/logo-text.svg" alt="logo-text" style="filter: brightness(0) invert(1); height: 1.4em">
         </div>
@@ -233,30 +233,30 @@
             <div class="col-6 col-lg-3 d-flex flex-column align-items-center mb-4">
                 <ul class="ps-0 text-light lh-lg">
                     <h5 class="text-orange mb-3">Pages</h5>
-                    <li>Start</li>
-                    <li>Listings</li>
-                    <li>Listings alt. 2</li>
-                    <li>Contact</li>
-                    <li>Legal</li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Start </a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Listings </a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Listings alt. 2</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Contact</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Legal</a> </li>
                 </ul>
             </div>
             <div class="col-6 col-lg-2 d-flex flex-column align-items-center">
                 <ul class="ps-0 text-light lh-lg">
                     <h5 class="text-orange mb-3">Company</h5>
-                    <li>About</li>
-                    <li>Our team</li>
-                    <li>Newsroom</li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> About</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Our team</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Newsroom</a> </li>
                 </ul>
             </div>
 
             <div class="col-6 col-lg-3 d-flex flex-column align-items-center">
                 <ul class="ps-0 text-light lh-lg">
                     <h5 class="text-orange mb-3">Utility</h5>
-                    <li>Instructions</li>
-                    <li>Style guide</li>
-                    <li>Licenses</li>
-                    <li>Changelog</li>
-                    <li>404</li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Instructions</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Style guide</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Licenses</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> Changelog</a> </li>
+                    <li> <a href="#" target="_blank" class="text-decoration-none text-light"> 404</a> </li>
                 </ul>
             </div>
             <div class="col-6 col-lg-4 d-flex flex-column align-items-center">
@@ -282,6 +282,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> <!-- bootstrap 5.2 -->
     <script src="scripts/cards.js"></script>
+    <script src="scripts/slider.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>

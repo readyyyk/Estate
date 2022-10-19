@@ -1,4 +1,4 @@
-let productsCards = [
+const productsCards = [
     {
         type: "House",
         title: "California St.",
@@ -47,7 +47,7 @@ let productsCards = [
     productsImgsType = "jpg"
 cards(productsCards, productsCardsEl, productsImgsDir, productsImgsPref, productsImgsType)
 
-let teamCardsData = [
+const teamCardsData = [
     {
         name: "Ava Orn",
         job: "Managing Broker"
@@ -74,7 +74,7 @@ let teamCardsData = [
     teamImgsType = "png"
 teamCards(teamCardsData, teamCardsEl, teamImgsDir, teamImgsPref, teamImgsType)
 
-let sliderData = [
+const sliderData = [
     {
         stars: 5, //max 5
         title: "We found the perfect home!",
@@ -198,21 +198,4 @@ function sliderCards(cards, parentEl){
         
         parentEl.appendChild(tempCard)
     })
-}
-
-let sliderInner = document.querySelector("#slider-inner"),
-    tempArrayOfSliderEls = document.querySelectorAll(".card")
-    step = tempArrayOfSliderEls[tempArrayOfSliderEls.length-1].offsetWidth
-step+=16
-function slider(dir){
-    let tempStr = sliderInner.style.left,
-        temp = Number(tempStr.replace("px",""))
-    tempInnerW = sliderInner.offsetWidth
-    if(dir && temp < 0)
-        temp += step
-    else if(!dir && -temp < tempInnerW-step)
-        temp -= step
-
-    console.log(`${temp}px`)
-    sliderInner.style.left = `${temp}px`
 }

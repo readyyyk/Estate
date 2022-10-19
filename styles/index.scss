@@ -30,7 +30,7 @@ body {
 a{
   transition: color ease .17s;
   &:hover{
-    color: $text-orange;
+    color: $text-orange !important;
   }
 }
 

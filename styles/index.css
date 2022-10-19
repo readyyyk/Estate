@@ -32,7 +32,7 @@ a {
   transition: color ease 0.17s;
 }
 a:hover {
-  color: #FF8A63;
+  color: #FF8A63 !important;
 }
 
 .card-body span {
