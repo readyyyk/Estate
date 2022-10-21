@@ -2,6 +2,26 @@
   font-family: "Poppins";
   src: url("../src/fonts/Poppins-Regular.ttf");
 }
+@-webkit-keyframes _slideInUp {
+  from {
+    bottom: -1em;
+    opacity: 0;
+  }
+  to {
+    bottom: 5em;
+    opacity: 0.6;
+  }
+}
+@keyframes _slideInUp {
+  from {
+    bottom: -1em;
+    opacity: 0;
+  }
+  to {
+    bottom: 5em;
+    opacity: 0.6;
+  }
+}
 .pLib-sb-Minimal::-webkit-scrollbar {
   width: 0.9em;
   background: transparent;
@@ -125,12 +145,20 @@ a:hover {
   height: 4em;
   position: absolute;
   left: 50%;
-  bottom: 5em;
   transform: translateX(-50%) rotateZ(0.25turn);
   background: url("../src/imgs/right-arrow-inside-circle.svg");
   background-size: cover;
-  opacity: 0.6;
-  transition: opacity 0.1s ease;
+  transition: all 0.1s ease;
+  bottom: -1em;
+  opacity: 0;
+  -webkit-animation-name: _slideInUp;
+          animation-name: _slideInUp;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   pointer-events: all;
   cursor: pointer;
 }

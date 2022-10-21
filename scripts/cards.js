@@ -1,137 +1,153 @@
-const productsCards = [
-    {
-        type: "House",
-        title: "California St.",
-        beds: 16,
-        baths: 2,
-        rooms: 11,
-    },
-    {
-        type: "Villa",
-        title: "Welford Gardens",
-        beds: 12,
-        baths: 3,
-        rooms: 16,
-    },
-    {
-        type: "House",
-        title: "The Grove",
-        beds: 12,
-        baths: 2,
-        rooms: 14,
-    },
-    {
-        type: "Apartment",
-        title: "Wallace St.",
-        beds: 10,
-        baths: 2,
-        rooms: 8,
-    },
-    {
-        type: "Apartment",
-        title: "Dwight Way",
-        beds: 8,
-        baths: 1,
-        rooms: 6,
-    },
-    {
-        type: "House",
-        title: "North Avenue",
-        beds: 14,
-        baths: 3,
-        rooms: 11,
-    }],
-    productsCardsEl = document.querySelector("#productsCards"),
-    productsImgsDir = "src/imgs/cards-1",
-    productsImgsPref = "cards-1",
-    productsImgsType = "jpg",
-    productsAnimation = "animate__fadeInUp"
-renderCards(productsCards, productsCardsEl, productsImgsDir, productsImgsPref, productsImgsType, productsAnimation)
+const productsCardsData = {
+    type: "product",
+    innerData: [
+        {
+            type: "House",
+            title: "California St.",
+            beds: 16,
+            baths: 2,
+            rooms: 11,
+        },
+        {
+            type: "Villa",
+            title: "Welford Gardens",
+            beds: 12,
+            baths: 3,
+            rooms: 16,
+        },
+        {
+            type: "House",
+            title: "The Grove",
+            beds: 12,
+            baths: 2,
+            rooms: 14,
+        },
+        {
+            type: "Apartment",
+            title: "Wallace St.",
+            beds: 10,
+            baths: 2,
+            rooms: 8,
+        },
+        {
+            type: "Apartment",
+            title: "Dwight Way",
+            beds: 8,
+            baths: 1,
+            rooms: 6,
+        },
+        {
+            type: "House",
+            title: "North Avenue",
+            beds: 14,
+            baths: 3,
+            rooms: 11,
+        }],
+    parentEl: document.querySelector("#productsCards"),
+    imgsDir: "src/imgs/cards-1",
+    imgsPref: "cards-1",
+    imgsType: "jpg",
+    animationName: "animate__fadeInUp"
+}
+//renderCards(productsCardsData, productsCardsEl, productsImgsDir, productsImgsPref, productsImgsType, productsAnimation)
 
-const teamCardsData = [
-    {
-        name: "Ava Orn",
-        job: "Managing Broker"
-    },
-    {
-        name: "Ella Hessel",
-        job: "Agent"
-    },
-    {
-        name: "Daryl Gislason",
-        job: "REALTOR"
-    },
-    {
-        name: "David Sporer",
-        job: "Agent"
-    },
-    {
-        name: "Trevor Torphy",
-        job: "Agent"
-    },
-    {
-        name: "Amanda Giovanni",
-        job: "REALTOR"
-    }],
-    teamCardsEl = document.querySelector("#teamCardsEl"),
-    teamImgsDir = "src/imgs/avatars",
-    teamImgsPref = "avatars",
-    teamImgsType = "png"
-renderTeamCards(teamCardsData, teamCardsEl, teamImgsDir, teamImgsPref, teamImgsType)
+const teamCardsData = {
+    type: "team",
+    innerData: [
+        {
+            name: "Ava Orn",
+            job: "Managing Broker"
+        },
+        {
+            name: "Ella Hessel",
+            job: "Agent"
+        },
+        {
+            name: "Daryl Gislason",
+            job: "REALTOR"
+        },
+        {
+            name: "David Sporer",
+            job: "Agent"
+        },
+        {
+            name: "Trevor Torphy",
+            job: "Agent"
+        },
+        {
+            name: "Amanda Giovanni",
+            job: "REALTOR"
+        }
+    ],
+    parentEl: document.querySelector("#teamCardsEl"),
+    imgsDir: "src/imgs/avatars",
+    imgsPref: "avatars",
+    imgsType: "png",
+    animationName: "animate__zoomIn"
+}
+//renderTeamCards(teamCardsData, teamCardsEl, teamImgsDir, teamImgsPref, teamImgsType)
 
-const newsroomCardsData = [
-    {
-        title: "Press release",
-        text: "Market watch: are condos still a good investment?",
-        date: "August 12, 2021"
-    },
-    {
-        title: "Announcement",
-        text: "The history of great design",
-        date: "August 12, 2021"
-    },
-    {
-        title: "Company news",
-        text: "Designers who changed everything",
-        date: "August 12, 2021"
-    }],
-    newsroomCardsEl = document.querySelector("#newsroomCards"),
-    newsroomCardsImgsDir = "src/imgs/cards-2",
-    newsroomCardsImgsPref = "cards-2",
-    newsroomCardsImgsType = "jpg",
-    newsroomCardsAnimation = "animate__fadeInUp"
-renderNewsroomCards(newsroomCardsData, newsroomCardsEl, newsroomCardsImgsDir, newsroomCardsImgsPref, newsroomCardsImgsType, newsroomCardsAnimation)
+const newsroomCardsData = {
+    type: "news",
+    innerData: [
+        {
+            title: "Press release",
+            text: "Market watch: are condos still a good investment?",
+            date: "August 12, 2021"
+        },
+        {
+            title: "Announcement",
+            text: "The history of great design",
+            date: "August 12, 2021"
+        },
+        {
+            title: "Company news",
+            text: "Designers who changed everything",
+            date: "August 12, 2021"
+        }
+    ],
+    parentEl: document.querySelector("#newsroomCards"),
+    imgsDir: "src/imgs/cards-2",
+    imgsPref: "cards-2",
+    imgsType: "jpg",
+    animationName: "animate__fadeInUp"
+}
+// renderNewsroomCards(newsroomCardsData, newsroomCardsEl, newsroomCardsImgsDir, newsroomCardsImgsPref, newsroomCardsImgsType, newsroomCardsAnimation)
 
-const sliderData = [
-    {
-        stars: 5,
-        title: "We found the perfect home!",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-        author: "Nate Davidsson"
-    },
-    {
-        stars: 4,
-        title: "We're so happy with Estate.",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.",
-        author: "Laura Paulie"
-    },
-    {
-        stars: 2,
-        title: "Thank you for our beautiful home.",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-        author: "Greg Todd"
-    },
-    {
-        stars: 5,
-        title: "Smth for slider",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id. Star this project on <a href='https://github.com/readyyyk'> my github page </a>",
-        author: "Readyyyk"
-    }],
-    sliderEl = document.querySelector("#slider-inner")
-renderSliderCards(sliderData, sliderEl)
+const sliderData = {
+    type: "sliderEl",
+    innerData: [
+        {
+            stars: 5,
+            title: "We found the perfect home!",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+            author: "Nate Davidsson"
+        },
+        {
+            stars: 4,
+            title: "We're so happy with Estate.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.",
+            author: "Laura Paulie"
+        },
+        {
+            stars: 2,
+            title: "Thank you for our beautiful home.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            author: "Greg Todd"
+        },
+        {
+            stars: 5,
+            title: "Smth for slider",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id. Star this project on <a href='https://github.com/readyyyk'> my github page </a>",
+            author: "Readyyyk"
+        }
+    ],
+    parentEl: document.querySelector("#slider-inner")
+}
+// renderSliderCards(sliderData, sliderEl)
 
-function renderCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
-    cards.forEach( (el, i) => {
+class ProductCard {
+    constructor(el, imgsDir, imgPref, cnt, imgType, animationName) {
         let tempCard = document.createElement('div')
 
         tempCard.className = "card m-3 mx-lg-0 animate"
@@ -139,7 +155,7 @@ function renderCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
         tempCard.style.width = "24rem";
         let tempStr =
         `
-            <img class="card-img-top" src="${imgsDir}/${imgPref}-${i}.${imgType}">
+            <img class="card-img-top" src="${imgsDir}/${imgPref}-${cnt}.${imgType}">
             <div class="card-body p-4 text-center">
                 <span class="text-light-grey text-uppercase" style="letter-spacing:2px;"> ${el.type} </span>
                 <h4> ${el.title} </h4>
@@ -163,36 +179,36 @@ function renderCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
         tempStr +=`</span>`
 
         tempCard.innerHTML = tempStr
-        
-        parentEl.appendChild(tempCard)
-    })
+
+        this.DOMelement = tempCard
+    }
 }
 
-function renderTeamCards(cards, parentEl, imgsDir, imgPref, imgType){
-    cards.forEach( (el, i) => {
+class TeamCard {
+    constructor(el, imgsDir, imgPref, cnt, imgType, animationName){
         let tempCard = document.createElement('div')
 
-        tempCard.className = "d-flex my-2"
+        tempCard.className = "d-flex my-2 animate"
+        tempCard.setAttribute("data-animation", animationName)
         tempCard.style.width = "18rem";
         tempCard.style.height = "fit-content";
         let tempStr =
         `
-            <img class="rounded me-2" src="${imgsDir}/${imgPref}-${i}.${imgType}">
+            <img class="rounded me-2" src="${imgsDir}/${imgPref}-${cnt}.${imgType}">
             <div class="d-flex flex-column justify-content-center">
                 <p class="m-0 lh-sm" style="letter-spacing:2px;"> ${el.name} </p>
                 <p class="m-0 lh-sm text-grey text-uppercase" style="font-size: 12px;letter-spacing: 2px"> ${el.job} </p>
                 
             </div>
         `
-
         tempCard.innerHTML = tempStr
         
-        parentEl.appendChild(tempCard)
-    })
+        this.DOMelement = tempCard
+    }
 }
 
-function renderNewsroomCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
-    cards.forEach( (el, i) => {
+class NewsroomCard {
+    constructor(el, imgsDir, imgPref, cnt, imgType, animationName){
         let tempCard = document.createElement('div')
 
         tempCard.className = "card m-3 mx-lg-0 rounded-4 overflow-hidden animate"
@@ -200,7 +216,7 @@ function renderNewsroomCards(cards, parentEl, imgsDir, imgPref, imgType, animati
         tempCard.style.width = "24rem";
         let tempStr =
         `
-            <img src="${imgsDir}/${imgPref}-${i}.${imgType}" class="card-img-top" alt="cards-2-0">
+            <img src="${imgsDir}/${imgPref}-${cnt}.${imgType}" class="card-img-top" alt="cards-2-0">
             <div class="card-body">
                 <p class="card-text text-orange text-uppercase text-12 mb-2" style="letter-spacing: 2px;"> ${el.title}</p>
                 <p class="mb-2 lh-sm">${el.text}</p>
@@ -209,13 +225,12 @@ function renderNewsroomCards(cards, parentEl, imgsDir, imgPref, imgType, animati
         `
         tempCard.innerHTML = tempStr
         
-        parentEl.appendChild(tempCard)
-    })
+        this.DOMelement = tempCard
+    }
 }
 
-
-function renderSliderCards(cards, parentEl){
-    cards.forEach( (el, i) => {
+class SliderCard{
+    constructor(el, animationName){
         let tempCard = document.createElement('div')
 
         tempCard.className = "card p-2 m-2 rounded-2"
@@ -245,6 +260,37 @@ function renderSliderCards(cards, parentEl){
 
         tempCard.innerHTML = tempStr
         
-        parentEl.appendChild(tempCard)
+        this.DOMelement = tempCard
+    }
+}
+
+
+function renderCards(cardsDataArray){
+    cardsDataArray.forEach( (cardsData) => {
+        if(cardsData.type === "product"){
+            cardsData.innerData.forEach( (el, i) => {
+                let tempCard = new ProductCard(el, cardsData.imgsDir, cardsData.imgsPref, i, cardsData.imgsType, cardsData.animationName)
+                cardsData.parentEl.appendChild(tempCard.DOMelement)
+            } )
+        }
+        else if(cardsData.type === "team") {
+            cardsData.innerData.forEach( (el, i) => {
+                let tempCard = new TeamCard(el, cardsData.imgsDir, cardsData.imgsPref, i, cardsData.imgsType, cardsData.animationName)
+                cardsData.parentEl.appendChild(tempCard.DOMelement)
+            } )
+        }
+        else if(cardsData.type === "news") {
+            cardsData.innerData.forEach( (el, i) => {
+                let tempCard = new NewsroomCard(el, cardsData.imgsDir, cardsData.imgsPref, i, cardsData.imgsType, cardsData.animationName)
+                cardsData.parentEl.appendChild(tempCard.DOMelement)
+            } )
+        }
+        else if(cardsData.type === "sliderEl") {
+            cardsData.innerData.forEach( (el, i) => {
+                let tempCard = new SliderCard(el)
+                cardsData.parentEl.appendChild(tempCard.DOMelement)
+            } )
+        }
     })
 }
+renderCards([productsCardsData, teamCardsData, newsroomCardsData, sliderData])

@@ -17,6 +17,17 @@ $border-color: #CACCD1;
   font-family: "Poppins";
   src: url("../src/fonts/Poppins-Regular.ttf");
 }
+@keyframes _slideInUp {
+  from{
+    bottom: -1em;
+    opacity: 0;
+  }
+  to{
+    bottom: 5em;
+    opacity: .6;
+  }
+}
+
 .pLib-sb-Minimal::-webkit-scrollbar{width:.9em;background:transparent}
 .pLib-sb-Minimal::-webkit-scrollbar-track{background:transparent}
 .pLib-sb-Minimal::-webkit-scrollbar-thumb{background-color:#9ba3a7;border-radius:20px;border:5px solid transparent;background-clip:content-box}
@@ -123,14 +134,21 @@ a{
 
       position: absolute;
       left: 50%;
-      bottom: 5em;
+      // bottom: 5em;
       transform: translateX(-50%) rotateZ(.25turn);
 
       background: url("../src/imgs/right-arrow-inside-circle.svg");
       background-size: cover;
-      opacity: .6;
+      // opacity: .6;
 
-      transition: opacity .1s ease;
+      transition: all .1s ease;
+
+      bottom: -1em;
+      opacity: 0;
+      animation-name: _slideInUp;
+      animation-delay: 1.5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
 
       pointer-events: all;
       cursor: pointer;

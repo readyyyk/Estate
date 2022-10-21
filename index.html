@@ -14,7 +14,7 @@
 </head>
 <body class="pLib-sb-Minimal">
 
-    <nav id="navbar" class="navbar fixed-top navbar-expand-sm bg-light">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-sm bg-light animate__animated animate__slideInDown" style="animation-delay: 1.5s;">
         <div class="container-lg">
             <a class="navbar-brand d-flex align-items-end" href="#">
                 <img src="src/imgs/logo-colored.svg" alt="logo-colored" class="pe-2">
@@ -36,14 +36,14 @@
         </div>
     </nav>
 
-    <main data-bs-spy="scroll" data-bs-target="#navbar">
+    <main data-bs-spy="scroll" data-bs-target="#navbar" class="overflow-hidden">
         <section class="container-fluid vh-100 d-flex justify-content-center align-items-center flex-column section1" onclick="document.querySelector('#section2').scrollIntoView()">
-            <img class="mb-3" style="height: 56px" src="src/imgs/logo-colored.svg" alt="logo-colored">
-            <img class="mb-3" src="src/imgs/logo-text.svg" alt="logo-text">
-            <h1 class="px-3 text-center" style="max-width: 525px"> We're here to help you find a new home. </h1>
+            <img class="mb-3 animate__animated animate__fadeInUp" style="height: 56px;" src="src/imgs/logo-colored.svg" alt="logo-colored">
+            <img class="mb-3 animate__animated animate__fadeInUp" style="animation-delay: .5s;" src="src/imgs/logo-text.svg" alt="logo-text">
+            <h1 class="px-3 text-center animate__animated animate__fadeInUp" style="max-width: 525px;  animation-delay: 1s;"> We're here to help you find a new home. </h1>
         </section>
 
-        <section id="section2" class="section2 overflow-hidden">
+        <section id="section2" class="section2 ">
             <div class="container-lg d-md-flex p-5">
                 <div class="d-flex flex-column mb-3 mb-md-0 me-0 me-md-5">
                     <h6 class="m-0 text-orange"> Our goal </h6>
@@ -52,7 +52,7 @@
                 <div>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. </p>
                     <p> Interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. </p>
-                    <div class="d-flex">
+                    <div class="d-flex animate" data-animation="animate__zoomIn">
                         <img class="rounded me-2" src="src/imgs/avatars/avatars-0.png" alt="avatars-0">
                         <div class="d-flex flex-column justify-content-center">
                             <p class="m-0 lh-sm"> Ava Orn </p>
@@ -74,7 +74,7 @@
 
                     <img class="mb-3 mb-md-0 me-0 me-lg-5 img-fluid rounded-5" src="src/imgs/opp-bg.png" alt="opp-img">
                     <div class="d-flex flex-column justify-content-between pt-3 py-md-5 section3__opp">
-                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300" style="letter-spacing: 2px">
+                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300 animate" data-animation="animate__flipInX" style="letter-spacing: 2px">
                             <div class="bg-grey-dark p-3 m-3 m-lg-0 wh-60 text-center">
                                 <img src="src/imgs/opp-1.svg" alt="opp-1">
                             </div>
@@ -83,7 +83,7 @@
                                 <p class="text-grey" style="font-size: 14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
-                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300" style="letter-spacing: 2px">
+                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300 animate" data-animation="animate__flipInX" style="letter-spacing: 2px">
                             <div class="bg-grey-dark p-3 m-3 m-lg-0 wh-60 text-center">
                                 <img src="src/imgs/opp-2.svg" alt="opp-2">
                             </div>
@@ -92,7 +92,7 @@
                                 <p class="text-grey" style="font-size: 14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
-                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300" style="letter-spacing: 2px">
+                        <div class="d-lg-block d-flex bg-grey p-4 rounded-4 mw-300 animate" data-animation="animate__flipInX" style="letter-spacing: 2px">
                             <div class="bg-grey-dark p-3 m-3 m-lg-0 wh-60 text-center">
                                 <img src="src/imgs/opp-3.svg" alt="opp-3">
                             </div>
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="container d-flex flex-wrap justify-content-center justify-content-lg-between px-lg-5 px-xxl-0 overflow-hidden" id="productsCards">
+            <div class="container d-flex flex-wrap justify-content-center justify-content-lg-between px-lg-5 px-xxl-0 " id="productsCards">
                 <!-- cards.js -> productCards -->
             </div>
 
@@ -156,7 +156,7 @@
             </div>
 
             <div id="newsroomCards" class="container d-flex flex-wrap justify-content-center justify-content-lg-between px-lg-5 px-xxl-0">
- 
+                <!-- cards.js -> productCards -->
             </div>
             
             <div class="container-fluid text-center py-3 py-md-5 mb-0">
@@ -172,7 +172,7 @@
                 </div>
             </div>
     
-            <div id="slider" class="container-lg px-0">
+            <div id="slider" class="container-lg px-0  animate" data-animation="animate__fadeInRight">
                 <div id="slider-inner" class="text-start" style="left: 0px;">
                     <!-- cards -> sliderCards -->
                 </div>
