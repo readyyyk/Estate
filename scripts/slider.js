@@ -12,7 +12,6 @@ function sliderMove(dir){
     else if(!dir && -temp < innerW-step-window.innerWidth/4)
         temp -= step
 
-    console.log(`${temp}px`)
     sliderInner.style.left = `${temp}px`
 }
 

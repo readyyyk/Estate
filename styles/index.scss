@@ -156,3 +156,12 @@ a{
     max-width: none;
   }
 }
+
+@media only screen and (hover: none) and (pointer: coarse){
+
+  .collapse-mobile{
+    display: none;
+    margin-top: 0;
+  }
+
+}

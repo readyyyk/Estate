@@ -44,8 +44,9 @@ const productsCards = [
     productsCardsEl = document.querySelector("#productsCards"),
     productsImgsDir = "src/imgs/cards-1",
     productsImgsPref = "cards-1",
-    productsImgsType = "jpg"
-cards(productsCards, productsCardsEl, productsImgsDir, productsImgsPref, productsImgsType)
+    productsImgsType = "jpg",
+    productsAnimation = "animate__fadeInUp"
+renderCards(productsCards, productsCardsEl, productsImgsDir, productsImgsPref, productsImgsType, productsAnimation)
 
 const teamCardsData = [
     {
@@ -55,16 +56,20 @@ const teamCardsData = [
     {
         name: "Ella Hessel",
         job: "Agent"
-    },{
+    },
+    {
         name: "Daryl Gislason",
         job: "REALTOR"
-    },{
+    },
+    {
         name: "David Sporer",
         job: "Agent"
-    },{
+    },
+    {
         name: "Trevor Torphy",
         job: "Agent"
-    },{
+    },
+    {
         name: "Amanda Giovanni",
         job: "REALTOR"
     }],
@@ -72,44 +77,65 @@ const teamCardsData = [
     teamImgsDir = "src/imgs/avatars",
     teamImgsPref = "avatars",
     teamImgsType = "png"
-teamCards(teamCardsData, teamCardsEl, teamImgsDir, teamImgsPref, teamImgsType)
+renderTeamCards(teamCardsData, teamCardsEl, teamImgsDir, teamImgsPref, teamImgsType)
+
+const newsroomCardsData = [
+    {
+        title: "Press release",
+        text: "Market watch: are condos still a good investment?",
+        date: "August 12, 2021"
+    },
+    {
+        title: "Announcement",
+        text: "The history of great design",
+        date: "August 12, 2021"
+    },
+    {
+        title: "Company news",
+        text: "Designers who changed everything",
+        date: "August 12, 2021"
+    }],
+    newsroomCardsEl = document.querySelector("#newsroomCards"),
+    newsroomCardsImgsDir = "src/imgs/cards-2",
+    newsroomCardsImgsPref = "cards-2",
+    newsroomCardsImgsType = "jpg",
+    newsroomCardsAnimation = "animate__fadeInUp"
+renderNewsroomCards(newsroomCardsData, newsroomCardsEl, newsroomCardsImgsDir, newsroomCardsImgsPref, newsroomCardsImgsType, newsroomCardsAnimation)
 
 const sliderData = [
     {
-        stars: 5, //max 5
+        stars: 5,
         title: "We found the perfect home!",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
         author: "Nate Davidsson"
     },
     {
-        stars: 4, //max 5
+        stars: 4,
         title: "We're so happy with Estate.",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.",
         author: "Laura Paulie"
     },
     {
-        stars: 2, //max 5
+        stars: 2,
         title: "Thank you for our beautiful home.",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
         author: "Greg Todd"
     },
     {
-        stars: 5, //max 5
+        stars: 5,
         title: "Smth for slider",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id. Star this project on <a href='https://github.com/readyyyk'> my github page </a>",
         author: "Readyyyk"
-    }
-],
+    }],
     sliderEl = document.querySelector("#slider-inner")
+renderSliderCards(sliderData, sliderEl)
 
-    sliderCards(sliderData, sliderEl)
-
-
-function cards(cards, parentEl, imgsDir, imgPref, imgType){
+function renderCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
     cards.forEach( (el, i) => {
         let tempCard = document.createElement('div')
 
-        tempCard.className = "card m-3 mx-lg-0"
+        tempCard.className = "card m-3 mx-lg-0 animate"
+        tempCard.setAttribute("data-animation", animationName)
         tempCard.style.width = "24rem";
         let tempStr =
         `
@@ -142,7 +168,7 @@ function cards(cards, parentEl, imgsDir, imgPref, imgType){
     })
 }
 
-function teamCards(cards, parentEl, imgsDir, imgPref, imgType){
+function renderTeamCards(cards, parentEl, imgsDir, imgPref, imgType){
     cards.forEach( (el, i) => {
         let tempCard = document.createElement('div')
 
@@ -165,12 +191,35 @@ function teamCards(cards, parentEl, imgsDir, imgPref, imgType){
     })
 }
 
-function sliderCards(cards, parentEl){
+function renderNewsroomCards(cards, parentEl, imgsDir, imgPref, imgType, animationName){
+    cards.forEach( (el, i) => {
+        let tempCard = document.createElement('div')
+
+        tempCard.className = "card m-3 mx-lg-0 rounded-4 overflow-hidden animate"
+        tempCard.setAttribute("data-animation", animationName)
+        tempCard.style.width = "24rem";
+        let tempStr =
+        `
+            <img src="${imgsDir}/${imgPref}-${i}.${imgType}" class="card-img-top" alt="cards-2-0">
+            <div class="card-body">
+                <p class="card-text text-orange text-uppercase text-12 mb-2" style="letter-spacing: 2px;"> ${el.title}</p>
+                <p class="mb-2 lh-sm">${el.text}</p>
+                <p class="text-12 text-grey mb-0">${el.date}</p>
+            </div>
+        `
+        tempCard.innerHTML = tempStr
+        
+        parentEl.appendChild(tempCard)
+    })
+}
+
+
+function renderSliderCards(cards, parentEl){
     cards.forEach( (el, i) => {
         let tempCard = document.createElement('div')
 
         tempCard.className = "card p-2 m-2 rounded-2"
-        tempCard.style = "width:34em; max-width:80vw;";
+        tempCard.style = "width:34em; max-width:70vw;";
 
         let tempStr =
         `
